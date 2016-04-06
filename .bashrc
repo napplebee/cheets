@@ -101,6 +101,16 @@ alias pull="git pull"
 alias push="git push"
 alias gco="git commit"
 alias add="git add"
+alias pipf="pip freeze"
+alias pipi="pip install"
+alias v="vim"
+
+pscp () {
+    user=`whoami`
+    full_path=`readlink -f $1`
+    echo "scp $user@$HOSTNAME:$full_path ."
+}
+
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
