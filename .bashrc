@@ -113,13 +113,16 @@ pscp () {
 
 init_git_branch() {
     local branch
-
-    if branch=$(git branch 2>/dev/null | grep '^*' | colrm 1 2); then
+    branch=$(git branch 2>/dev/null | grep '^*' | colrm 1 2)
+    # echo $branch
+    if [ "$branch" != "" ]  
+    then
         git_branch="[$branch]"
     else
         git_branch=""
     fi
 }
+
 
 export PROMPT_COMMAND="init_git_branch; $PROMPT_COMMAND"
 
