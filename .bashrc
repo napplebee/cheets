@@ -111,6 +111,21 @@ pscp () {
     echo "scp $user@$HOSTNAME:$full_path ."
 }
 
+init_git_branch() {
+    local branch
+
+    if branch=$(git branch 2>/dev/null | grep '^*' | colrm 1 2); then
+        git_branch="[$branch]"
+    else
+        git_branch=""
+    fi
+}
+
+export PROMPT_COMMAND="init_git_branch; $PROMPT_COMMAND"
+
+# export PS1="\\t.\\[\\e[1;32m\\]\\u@\\h\\[\\e[0m\\]:\\w\$git_branch\\$ "
+
+
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
