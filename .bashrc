@@ -104,6 +104,9 @@ alias add="git add"
 alias pipf="pip freeze"
 alias pipi="pip install"
 alias v="vim"
+# ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+# ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+# info = remote show origin
 
 pscp () {
     user=`whoami`
