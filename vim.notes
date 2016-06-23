@@ -1,0 +1,5 @@
+* When editing, press Ctrl-n / Ctrl-p to cycle through the current word completion suggestions.
+
+* If you need key completion to make suggestions from other files, then Vim by default understand the ctags file. Simply run “ctags *.p?” to generate ctags for all Perl files and modules in the current directory
+
+* To split current window horizontally execute “:split” while in the normal mode. To split current window vertically, use “:vsplit” instead. If you don’t provide any filename as argument to split/vsplit then current filename is used. You further split resulting windows as much as you like. Use Ctrl-w w to cycle through the windows. “:close” will close the current windows. “:only” will close all windows except the current one.
